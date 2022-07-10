@@ -1,0 +1,33 @@
+$color-one: red;
+$color-two: blue;
+$color-three: green;
+$border-one: 1px solid green;
+$border-two: 1px solid red;
+
+div {
+    border: $border-two;
+    h1{
+        text-align: center;
+        color: $color-three;
+        text-decoration: underline 1px blue;
+    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+        margin: 10px;
+        article{
+            border: $border-one;
+            p{
+                color: $color-two;
+                padding: 20px;
+                text-align: center;
+            }
+            .red{
+                color: $color-one;
+            }
+            
+
+        }
+    }
+}
