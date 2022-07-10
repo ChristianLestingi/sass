@@ -1,0 +1,65 @@
+  div {
+      border: 1px solid red;
+
+      h1 {
+          text-align: center;
+          text-decoration: underline blue;
+          color: green;
+      }
+
+      section {
+          display: flex;
+          justify-content: center;
+          margin: 10px;
+         
+          
+          
+      }
+
+
+
+
+      $font-size: 1em;
+      $color-mixin:red;
+      $border-mixin: 1px solid green;
+      $size-font-footer:24px;
+
+
+      @mixin transform {
+          color:$color-mixin;
+          border: $border-mixin;
+          font-size: $font-size;
+
+
+      }
+
+      article {
+          @include transform;
+          width: 100%;
+          
+
+          p {
+              padding: 10px;
+              text-align: center;
+              
+              
+          }
+
+          #footer {
+              font-size: $size-font-footer;
+            color: green;
+          }
+          
+          }
+
+          #foot{
+           
+            border: 1px solid blue;
+            
+          }
+          .blue{ color: blue;
+
+          }
+          
+      }
+    
