@@ -1,0 +1,40 @@
+div {
+  border: 1px solid red;
+}
+div h1 {
+  text-align: center;
+  text-decoration: underline blue;
+  color: green;
+}
+div section {
+  display: flex;
+  justify-content: center;
+  margin: 0.625rem;
+}
+
+article {
+  color: red;
+  border: 1px solid green;
+  font-size: 1em;
+  width: 100%;
+}
+article p {
+  padding: 0.625rem;
+  text-align: center;
+}
+
+#footer {
+  color: green;
+  font-size: 1.5rem;
+  border: 1px solid blue;
+}
+
+#foot {
+  color: green;
+}
+
+.blue {
+  color: blue;
+}
+
+/*# sourceMappingURL=style.css.map */
