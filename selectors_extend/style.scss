@@ -1,0 +1,71 @@
+ %style {
+     padding: 1rem;
+     border: 1px solid red;
+     color: green;
+ }
+
+ div {
+     border: 1px solid red;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+
+
+
+     & h1 {
+         text-align: center;
+         color: green;
+         text-decoration: underline 1px blue;
+     }
+
+     & h2 {
+         @extend %style;
+         width: 250px;
+         height: auto;
+         text-align: center;
+         padding: 10px;
+         align-self: center;
+     }
+
+     &.foot {
+         border: 1px solid blue;
+
+         & p {
+             color: green;
+             font-size: 24px;
+             border: none;
+            
+         }
+
+         &.footer {
+             border: none;
+         }
+     }
+
+     & section {
+         display: flex;
+         justify-content: center;
+         margin: 10px;
+         
+
+     }
+
+    & article {
+         border: 1px solid green;
+         & p{
+            padding: 10px;
+            text-align: center;
+            color: blue;
+         } 
+     }
+    & .red{
+        color: red;
+     }
+
+
+
+
+
+
+
+ }
