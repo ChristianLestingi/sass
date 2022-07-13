@@ -1,0 +1,68 @@
+
+
+
+@function random-hex() {
+    $color: '#';
+    $parzial: '';
+
+    @for $i from 1 to 4 {
+        $parzial: $parzial+ convert(random(255));
+
+    }
+
+    @return unquote($color + $parzial);
+
+
+}
+
+
+
+@function convert($dec) {
+    $hexVals: "A" "B" "C" "D" "E" "F";
+    // $i: 6;
+    $base: 16;
+    $quotient: $dec;
+    $result: "";
+    @if $dec == 0 {
+         $result: "00";
+    }
+    @while $quotient != 0 {
+        $mod: $quotient % $base;
+        $quotient: floor(calc($quotient / $base));
+        @if $mod > 9 {
+            $mod: nth($hexVals, $mod - 9);
+        }
+         @if $dec< $base {
+            $result: "0" + $mod;
+        } @else {
+            $result: $mod + $result;
+        }
+    }
+
+    @return $result;
+}
+
+
+body {
+    height: 100vh;
+
+    .container {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-row: 1;
+
+        .colonna {
+            @for $i from 1 to 13 {
+                &:nth-child(#{$i}) {
+                    background-color: random-hex();
+                }
+            }
+
+            width: auto;
+            height: 100%;
+            border: 1px solid black;
+        }
+    }
+}
